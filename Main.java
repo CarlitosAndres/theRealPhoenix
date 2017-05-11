@@ -29,7 +29,7 @@ public class Main {
 		glfwShowWindow(window);
 		glfwMakeContextCurrent(window);
 
-
+		
 
 		GL.createCapabilities();
 		while(!glfwWindowShouldClose(window)){
@@ -43,7 +43,7 @@ public class Main {
 			glVertex2f(-0.5f, 0f);
 			
 			glColor4f(1, 1, 0, 0);
-			glVertex2f(0f, 0.5f);
+			glVertex2f(0f, -0.5f);
 			
 			glColor4f(1, 0, 1, 0);
 			glVertex2f(0.5f, 0f);
