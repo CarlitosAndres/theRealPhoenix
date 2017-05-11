@@ -1,6 +1,9 @@
 import static org.lwjgl.glfw.GLFW.*;
 import org.lwjgl.opengl.GL;
 import static org.lwjgl.opengl.GL11.*;
+
+import java.util.Random;
+
 import org.lwjgl.glfw.GLFWVidMode;
 
 
@@ -37,23 +40,26 @@ public class Main {
 			
 			glClear(GL_COLOR_BUFFER_BIT);
 			
+			Random rand = new Random();
+			
+			
 			glBegin(GL_QUADS);
 			
 			glColor4f(1, 0, 0, 0);
-			glVertex2f(-0.5f, 0f);
+			glVertex2f(-1f, -1f);
 			
 			glColor4f(1, 1, 0, 0);
-			glVertex2f(0f, -0.5f);
+			glVertex2f(1f, -1f);
 			
 			glColor4f(1, 0, 1, 0);
-			glVertex2f(0.5f, 0f);
+			glVertex2f(1f, 1f);
 			
 			glColor4f(1, 0, 1, 0);
-			glVertex2f(0f, 1f);
+			glVertex2f(-1f, 1f);
 			
 			glEnd();
 			
-			glBegin(GL_TRIANGLES);
+	/*		glBegin(GL_TRIANGLES);
 			
 			glColor4f(1, 0, 0, 0);
 			glVertex2f(-0.5f, -1f);
@@ -65,7 +71,7 @@ public class Main {
 			glVertex2f(0f, 0f);
 			
 			glEnd();
-			
+	*/		
 			
 			glfwSwapBuffers(window);	
 		}
